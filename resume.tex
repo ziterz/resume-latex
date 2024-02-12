@@ -1,0 +1,190 @@
+%----------------------------------------
+% LaTeX Resume
+% Author : Ziady Mubaraq
+% Source : https://github.com/ziterz/resume-latex/
+% License : MIT
+%----------------------------------------
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=0.3in,top=0.3in]{geometry}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\setlist{topsep=1mm, parsep=1.75mm, itemsep=-0.1em}
+
+\usepackage{tgschola}
+\usepackage[T1]{fontenc}
+
+\usepackage{changepage}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+
+\hyphenpenalty=10000
+
+\hypersetup{
+	colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%----------------------------------------
+% Custom commands
+\newcommand{\header}[1]{
+	\vspace{4mm}
+	{\large \noindent \textbf{#1}}
+	\vspace{1mm}
+	\hrule
+	\vspace{2mm}
+}
+
+\newcommand{\shortitem}[4]{
+	\begin{adjustwidth}{}{}
+		\textbf{#1} \hfill \ifx&#2& \else \textbf{#2} \fi \\
+		\textit{#3} \ifx&#4& \else \hfill #4 \fi
+	\end{adjustwidth}
+	\vspace{1mm}
+}
+
+\newcommand{\longitem}[4]{
+	\begin{adjustwidth}{}{}
+		\textbf{#1} \hfill \ifx&#2& \else \textbf{#2} \fi \\
+		\textit{#3} \ifx&#4& \else \hfill #4 \fi
+	\end{adjustwidth}
+	\vspace{-1mm}
+}
+
+\newcommand{\liststart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\listend}{\end{itemize}\vspace{1mm}}
+
+%----------------------------------------
+% Resume starts here
+\begin{document}
+
+	%----------------------------------------
+	% Hero
+	\begin{flushleft}
+		{\LARGE \textbf{Ziady Mubaraq}} \\
+		{\large Software Engineer, Educator}
+
+		\vspace{1mm}
+		
+		Jakarta, Indonesia  $\mid$ \href{https://wa.me/6285186661414}{(+62) 8518 666 1414} $\mid$ \href{mailto:ziady.mubaraq@gmail.com}{ziady.mubaraq@gmail.com} \\
+		\href{https://ziterz.dev}{ziterz.dev}  $\mid$ \href{https://github.com/ziterz}{github.com/ziterz} $\mid$ \href{https://linkedin.com/in/ziterz}{linkedin.com/in/ziterz}        
+	\end{flushleft}
+
+	\vspace{-3mm}
+
+	%----------------------------------------
+	% Objective
+	\header{Objective}
+		Seeking a position as a Software Engineer specializing in iOS development, aiming to leverage 4+ years of experience in web and mobile development, including both native and hybrid approaches. Having a proven track record of mentoring and leading teams at coding bootcamps, I maintain a strong work ethic and excel at adapting to any situation.
+		\vspace{1mm}
+
+	\setlength{\columnsep}{1.5em}
+
+	%----------------------------------------
+	% Multi Column
+	\begin{multicols}{2}
+
+		%----------------------------------------
+		% Projects
+		\header{Projects}
+			\longitem{\href{https://ziterz.dev/projects/riot-boardgame}{Riot Board Game}}{Oct - Nov 2023}{iOS Developer, Game Designer}{}
+			\liststart
+				\item Developing a hybrid board game with a native iOS companion app that integrates physical and digital elements using NFC technology for interactions.
+				\item Using Xcode, SwiftUI, CoreNFC, AVKit, MVVM design pattern, Figma, Illustrator, and Photoshop.
+			\listend
+
+			\longitem{\href{https://ziterz.dev/projects/mech-kit}{MechKit}}{Jul - Aug 2023}{iOS Developer, AR Designer}{}
+			\liststart
+				\item Built a native app for iPadOS to assist you in creating your very own personalized mechanical keyboard.
+				\item Using Xcode, SwiftUI, UIKit, CoreData, SceneKit, ARKit, RealityKit, and AVFoundation.
+			\listend
+
+			\longitem{\href{https://ziterz.dev/projects/the-academy-times}{The Academy Times}}{May 2023}{iOS Developer, AR Designer}{}
+			\liststart
+				\item Built a native iOS app that brings your local newspaper to life using the power of ARKit.
+				\item Using Xcode, UIKit, SceneKit, ARKit, and AVKit.
+			\listend
+
+			\longitem{HCIS Imeco}{Sep 2022 - Jan 2023}{Front End Developer}{}
+			\liststart
+				\item Built an HCIS (Human Capital Information System) application for a company such as detailed employee data, salaries, attendance, and company requirements.
+				\item Using Vue 3, Pinia, Vite, Maps, and TailwindCSS.
+			\listend
+
+			\longitem{\href{https://ziterz.dev/projects/speed-online}{Speed Online}}{Feb - Apr 2022}{Mobile Developer}{}
+			\liststart
+				\item Built an online application called “Speed Online” for ordering tickets for ship crossings in North Kalimantan.
+				\item Using Vue 3, Quasar, Vuex, Maps, WhatsApp OTP, and Xendit Payment Gateway.
+			\listend
+
+			\longitem{\href{https://ziterz.dev/projects/jastipinaja}{Jastipin Aja}}{Oct - Dec 2020}{Mobile Developer}{}
+			\liststart
+				\item Built an application called “JastipinAja” for users who miss their regional food during the pandemic era, providing same-day delivery.
+				\item Using React, React Native, Paper, Firebase, OneSignal, and Midtrans Payment Gateway.
+			\listend
+
+			\longitem{\href{https://ziterz.dev/projects/dicicilaja}{Dicicilaja}}{Jan - Dec 2019}{Lead Android Developer}{}
+			\liststart
+				\item Built an application called “Dicicilaja” that includes marketplace, sales app, branch office, rewards, simulation, and order in features.
+				\item The application is available on the Play Store and has been downloaded by more than 100,000 users.
+				\item Using Android Studio, Java, Kotlin, RxJava, Firebase, and OneSignal.
+			\listend
+
+		\columnbreak
+
+		%----------------------------------------
+		% Professional Experience
+		\header{Professional Experience}
+			\longitem{Apple Developer Academy}{Mar - Dec 2023}{Internship}{}
+			\liststart
+				\item Learn coding, design, and professional skills, such as iOS Development, Swift Programming, Apple Frameworks, Design Patterns, Testing and Human Interface Guidelines (HIG) principles, in a world-class developer environment.
+				\item Built applications that are available on TestFlight and the App Store.
+			\listend
+
+			\longitem{Hacktiv8 Indonesia}{Jun 2021 - Feb 2023}{Lead Full-Stack JavaScript Instructor}{}
+			\liststart
+				\item Evaluate and observe the learning process/instructors.
+				\item Collaborate with the Instructor Lead and the team to train and supervise new high-quality instructors.
+				\item Continuously monitor and maintain curriculum progress.
+				\item Teach and ensure that the course material is effectively delivered.
+			\listend
+
+			\longitem{Hacktiv8 Indonesia}{Jan 2020 - Jun 2021}{Full-Stack JavaScript Instructor}{}
+			\liststart
+				\item Teaches, guide and communicate with students.
+				\item Monitors and assesses students' progress on a regular basis.
+				\item Teaching courses such as Vue 3, Pinia, Vite, React, React Native, Redux, TDD, Jest, Microservices, NoSQL, MongoDB, GraphQL, and Docker.
+			\listend
+		
+		%----------------------------------------
+		% Certifications
+		\header{Certifications}
+			\shortitem{\href{https://www.credly.com/badges/3b51cb14-d2eb-4782-8c96-4d9a3cbb2797}{App Development with Swift Certified User by Apple}}{}{Certificate of Completion - Feb 2024}{}
+			\shortitem{100 Days of SwiftUI by Hacking with Swift}{}{Certificate of Distinction - Jan 2024}{}
+			\shortitem{100 Days of Swift by Hacking with Swift}{}{Certificate of Distinction - Jan 2024}{}
+			\shortitem{Apple Developer Academy Certificate}{}{Certificate of Completion - Dec 2023}{}
+			\shortitem{\href{https://www.wwdcscholars.com/s/0D25000C-A584-4C3D-A95B-AF574079E4D8/2023}{Swift Student Challenge WWDC23 by Apple}}{}{Swift Student Challenge Winner - Dec 2023}{}
+
+		%----------------------------------------
+		% Educational Background
+		\header{Educational Background}
+			\shortitem{Apple Developer Academy}{Dec 2023}{iOS Developer}{}
+			\shortitem{Indonesia Univesity of Education}{Oct 2019}{Bachelor of Education in Computer Science}{GPA: 3.72}
+
+	\end{multicols}
+
+\end{document}
