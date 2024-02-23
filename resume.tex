@@ -19,6 +19,7 @@
 
 \usepackage{changepage}
 \usepackage{fancyhdr}
+\usepackage{fontawesome5}
 \usepackage{multicol}
 
 \hyphenpenalty=10000
@@ -65,6 +66,12 @@
 	\vspace{-1mm}
 }
 
+\newcommand{\contentitem}[1]{
+	\vspace{1mm}
+		{#1}
+	\vspace{2mm}
+}
+
 \newcommand{\liststart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\listend}{\end{itemize}\vspace{1mm}}
 
@@ -80,8 +87,8 @@
 
 		\vspace{1mm}
 		
-		14 Dec 1996 $\mid$ Jakarta, Indonesia  $\mid$ \href{https://wa.me/6285186661414}{(+62) 8518 666 1414} $\mid$ \href{mailto:ziady.mubaraq@gmail.com}{ziady.mubaraq@gmail.com} \\
-		\href{https://ziterz.dev}{ziterz.dev}  $\mid$ \href{https://github.com/ziterz}{github.com/ziterz} $\mid$ \href{https://linkedin.com/in/ziterz}{linkedin.com/in/ziterz}        
+		Jakarta, Indonesia  $\mid$ 14 Dec 1996 $\mid$ \faWhatsapp ~\href{https://wa.me/6285186661414}{\underline{(+62) 85186661414}} $\mid$ \faEnvelope ~\href{mailto:ziady.mubaraq@gmail.com}{\underline{ziady.mubaraq@gmail.com}} \\
+		\faGlobe ~\href{https://ziterz.dev}{\underline{ziterz.dev}}  $\mid$ \faGithub ~\href{https://github.com/ziterz}{\underline{github.com/ziterz}} $\mid$ \faLinkedin ~\href{https://linkedin.com/in/ziterz}{\underline{linkedin.com/in/ziterz}}
 	\end{flushleft}
 
 	\vspace{-3mm}
@@ -89,7 +96,7 @@
 	%----------------------------------------
 	% Objective
 	\header{Objective}
-		Seeking a position as a Software Engineer specializing in iOS development, aiming to leverage 4+ years of experience in web and mobile development, including both native and hybrid approaches. Having a proven track record of mentoring and leading teams at coding bootcamps, I maintain a strong work ethic and excel at adapting to any situation.
+		Seeking a position as a Software Engineer specializing in iOS/Mobile Development, aiming to leverage 4 years of experience in web and mobile development, including both native and hybrid approaches. Having a proven track record of mentoring and leading teams at coding bootcamps, I maintain a strong work ethic and excel at adapting to any situation.
 		\vspace{1mm}
 
 	\setlength{\columnsep}{1.5em}
@@ -99,45 +106,47 @@
 	\begin{multicols}{2}
 
 		%----------------------------------------
+		% Skills
+		\header{Skills}
+		\textbf{iOS:} Swift, UIKit, SwiftUI, CocoaPods, RxSwift, iOS SDK \\
+		\textbf{Android:} Java, Kotlin, RxJava, Android SDK, Firebase \\
+		\textbf{Hybrid:} JavaScript, Vue.js, React.js, React Native, Redux \\
+		\textbf{Others:} OOP, MVC, MVVM, Git, Docker, RESTful APIs
+
+		%----------------------------------------
 		% Related Projects
 		\header{Related Projects}
-			\longitem{\href{https://ziterz.dev/projects/riot-boardgame}{Riot Board Game}}{Sep - Nov 2023}{iOS Developer, Game Designer}{}
+			\longitem{Riot Board Game}{Sep - Nov 2023}{iOS Developer \& Artwork Creator}{}
 			\liststart
 				\item Developed a hybrid board game with a native iOS companion app that integrates physical and digital elements using NFC technology for interactions.
-				\item Using Xcode, SwiftUI, CoreNFC, AVKit, MVVM design pattern, Figma, Illustrator, and Photoshop.
+				\item Using Xcode, SwiftUI, CoreNFC, AVKit, MVVM, Figma, Illustrator, and Photoshop.
 			\listend
 
-			\longitem{\href{https://ziterz.dev/projects/mech-kit}{MechKit}}{Jul - Aug 2023}{iOS Developer, AR Designer}{}
+			\longitem{MechKit}{Jul - Aug 2023}{iOS Developer \& AR Developer}{}
 			\liststart
 				\item Developed an app for iPadOS to assist you in creating your very own personalized mechanical keyboard.
-				\item Using Xcode, SwiftUI, UIKit, CoreData, SceneKit, ARKit, RealityKit, and AVFoundation.
+				\item Using Xcode, SwiftUI, UIKit, Core Data, SceneKit, ARKit, RealityKit, AVFoundation, Blender, and Figma.
 			\listend
 
-			\longitem{\href{https://ziterz.dev/projects/the-academy-times}{The Academy Times}}{May 2023}{iOS Developer, AR Designer}{}
+			\longitem{The Academy Times}{May 2023}{iOS Developer \& AR Developer}{}
 			\liststart
 				\item Developed a native iOS app that brings your local newspaper to life using the power of ARKit.
 				\item Using Xcode, UIKit, SceneKit, ARKit, and AVKit.
 			\listend
 
-			\longitem{\href{https://ziterz.dev/projects/hcis-imeco}{HCIS Imeco}}{Sep 2022 - Jan 2023}{Front End Developer}{}
-			\liststart
-				\item Developed the HCIS (Human Capital Information System) application for a company, including employee data, salaries, attendance, and company requirements.
-				\item Using Vue 3, Pinia, Vite, Maps, and TailwindCSS.
-			\listend
-
-			\longitem{\href{https://ziterz.dev/projects/speed-online}{Speed Online}}{Feb - Apr 2022}{Mobile Developer}{}
+			\longitem{Speed Online}{Feb - Apr 2022}{Mobile Developer}{}
 			\liststart
 				\item Developed the Speed Online mobile application for ordering tickets for ship crossings in North Kalimantan.
 				\item Using Vue 3, Quasar, Vuex, Maps, WhatsApp OTP, and Xendit Payment Gateway.
 			\listend
 
-			\longitem{\href{https://ziterz.dev/projects/jastipinaja}{Jastipin Aja}}{Oct - Dec 2020}{Mobile Developer}{}
+			\longitem{Jastipin Aja}{Oct - Dec 2020}{Mobile Developer}{}
 			\liststart
 				\item Developed the Jastipin Aja mobile application for Aldeoz Group to serve users who miss their regional food during the pandemic era, offering same-day delivery.
 				\item Using React, React Native, Paper, Firebase, OneSignal, and Midtrans Payment Gateway.
 			\listend
 
-			\longitem{\href{https://ziterz.dev/projects/dicicilaja}{Dicicilaja}}{Jan - Dec 2019}{Lead Android Developer}{}
+			\longitem{Dicicilaja}{Jan - Dec 2019}{Lead Android Developer}{}
 			\liststart
 				\item Developed the Dicicilaja mobile app for Adira Finance, including a marketplace, sales app, branch office, business rewards, simulation, order-in, and inbox.
 				\item The application is available on the Play Store and has been downloaded by more than 100,000 users.
@@ -150,26 +159,14 @@
 		% Professional Experience
 		\header{Professional Experience}
 			\longitem{Apple Developer Academy}{Mar - Dec 2023}{iOS Developer (Intern)}{}
-			\liststart
-				\item Learn coding, design, and professional skills, such as iOS Development, Swift Programming, Apple Frameworks, Design Patterns, Testing and Human Interface Guidelines (HIG) principles, in a world-class developer environment.
-				\item Built applications that are available on TestFlight and the App Store.
-			\listend
+			\contentitem{Gain expertise in coding, design, and professional skills, including iOS Development, Swift Programming, Apple Frameworks, Design Patterns, Testing, and Human Interface Guidelines (HIG) principles, within a world-class developer environment. \\Successfully built applications that are available on TestFlight and the App Store.}
 
 			\longitem{Hacktiv8 Indonesia}{Jun 2021 - Feb 2023}{Lead Full-Stack JavaScript Instructor}{}
-			\liststart
-				\item Evaluate and observe the learning process/instructors.
-				\item Collaborate with the Instructor Lead and the team to train and supervise new high-quality instructors.
-				\item Continuously monitor and maintain curriculum progress.
-				\item Teach and ensure that the course material is effectively delivered.
-			\listend
+			\contentitem{I was responsible for evaluating and observing the learning process and instructors while collaborating with the Instructor Lead and team to train and supervise new high-quality instructors. \\I continuously monitored and maintained curriculum progress to ensure alignment with learning objectives, while also actively teaching and ensuring the effective delivery of course material.}
 
 			\longitem{Hacktiv8 Indonesia}{Jan 2020 - Jun 2021}{Full-Stack JavaScript Instructor}{}
-			\liststart
-				\item Teaches, guide and communicate with students.
-				\item Monitors and assesses students' progress on a regular basis.
-				\item Teaching courses such as Vue 3, Pinia, Vite, React, React Native, Redux, TDD, Jest, Microservices, NoSQL, MongoDB, GraphQL, and Docker.
-			\listend
-		
+			\contentitem{I was deeply involved in teaching, guiding, and communicating with students, fostering a supportive learning environment. I maintained regular monitoring and assessment of students' progress, ensuring their continual growth and understanding. \\Taught various technologies: Vue 3, Pinia, Vite, React, React Native, Redux, TDD, Jest, Microservices, MongoDB, GraphQL, and Docker.}
+
 		%----------------------------------------
 		% Recent Certifications
 		\header{Recent Certifications}
