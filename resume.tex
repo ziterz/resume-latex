@@ -47,7 +47,15 @@
 	{\large \noindent \textbf{#1}}
 	\vspace{1mm}
 	\hrule
+	\vspace{1mm}
+}
+
+\newcommand{\skillsheader}[1]{
+	\vspace{4mm}
+	{\large \noindent \textbf{#1}}
 	\vspace{2mm}
+	\hrule
+	\vspace{1mm}
 }
 
 \newcommand{\shortitem}[4]{
@@ -71,7 +79,12 @@
 		{#1}
 	\vspace{2mm}
 }
-
+\newcommand{\skills}[1]{%
+	\begin{itemize}[leftmargin=*]
+		\setlength\itemsep{-2mm}
+		#1
+	\end{itemize}%
+}
 \newcommand{\liststart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\listend}{\end{itemize}\vspace{1mm}}
 
@@ -87,17 +100,16 @@
 
 		\vspace{1mm}
 		
-		Jakarta, Indonesia  $\mid$ 14 Dec 1996 $\mid$ \faWhatsapp ~\href{https://wa.me/6285186661414}{\underline{(+62) 85186661414}} $\mid$ \faEnvelope ~\href{mailto:ziady.mubaraq@gmail.com}{\underline{ziady.mubaraq@gmail.com}} \\
-		\faGlobe ~\href{https://ziterz.dev}{\underline{ziterz.dev}}  $\mid$ \faGithub ~\href{https://github.com/ziterz}{\underline{github.com/ziterz}} $\mid$ \faLinkedin ~\href{https://linkedin.com/in/ziterz}{\underline{linkedin.com/in/ziterz}}
+		Jakarta, Indonesia  $\mid$ 14 Dec 1996 $\mid$ \faWhatsapp ~\href{https://wa.me/6285186661414}{\underline{(+62) 85186661414}} $\mid$ \faEnvelope[regular] ~\href{mailto:ziady.mubaraq@gmail.com}{\underline{ziady.mubaraq@gmail.com}} \\
+		\faLink ~\href{https://ziterz.dev}{\underline{ziterz.dev}}  $\mid$ \faGithub ~\href{https://github.com/ziterz}{\underline{github.com/ziterz}} $\mid$ \faLinkedin ~\href{https://linkedin.com/in/ziterz}{\underline{linkedin.com/in/ziterz}}
 	\end{flushleft}
 
-	\vspace{-3mm}
+	\vspace{-4mm}
 
 	%----------------------------------------
 	% Objective
 	\header{Objective}
 		Seeking a position as a Software Engineer specializing in iOS/Mobile Development, aiming to leverage 4 years of experience in web and mobile development, including both native and hybrid approaches. Having a proven track record of mentoring and leading teams at coding bootcamps, I maintain a strong work ethic and excel at adapting to any situation.
-		\vspace{1mm}
 
 	\setlength{\columnsep}{1.5em}
 
@@ -106,12 +118,14 @@
 	\begin{multicols}{2}
 
 		%----------------------------------------
-		% Skills
-		\header{Skills}
-		\textbf{iOS:} Swift, UIKit, SwiftUI, CocoaPods, RxSwift, iOS SDK \\
-		\textbf{Android:} Java, Kotlin, RxJava, Android SDK, Firebase \\
-		\textbf{Hybrid:} JavaScript, Vue.js, React.js, React Native, Redux \\
-		\textbf{Others:} OOP, MVC, MVVM, Git, Docker, RESTful APIs
+		% Technical Skills
+		\skillsheader{Technical Skills}
+		\skills{
+			\item \textbf{iOS:} Swift, UIKit, SwiftUI, CocoaPods, RxSwift
+			\item \textbf{Android:} Java, Kotlin, RxJava, Dagger, Gradle, Jetpack
+			\item \textbf{Hybrid:} JavaScript, Vue, React, React Native, Redux
+			\item \textbf{Others Technologies:} OOP, MVC, MVVM, Firebase, Git, RESTful APIs, Agile, Scrum, Jira, Unit and UI Tests
+		}		
 
 		%----------------------------------------
 		% Related Projects
