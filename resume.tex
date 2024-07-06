@@ -71,6 +71,13 @@
 	\vspace{-1mm}
 }
 
+\newcommand{\projectitem}[4]{
+	\begin{adjustwidth}{}{}
+		\textbf{#1} - \textbf{#3} \hfill \ifx&#2& \else \textbf{#2} \fi \\
+	\end{adjustwidth}
+	\vspace{-1mm}
+}
+
 \newcommand{\skills}[1]{%
 	\begin{itemize}[leftmargin=*]\leftskip=0.5em
 		\setlength\itemsep{-1mm}
@@ -141,33 +148,33 @@
 	%----------------------------------------
 	% Related Projects
 	\header{Related Projects}
-		\longitem{Riot Board Game}{Sep - Nov 2023}{iOS Developer}{}
+		\projectitem{Riot Board Game}{Sep - Nov 2023}{iOS Developer}{}
 		\liststart
 			\item Created a hybrid board game for 2-4 players with a native iOS that integrates NFC cards and digital elements. \vspace{-1mm}
 			\item Using Xcode, SwiftUI, CoreNFC, and AVKit.
 		\listend
 
-		\longitem{HCIS Imeco}{Sep 2022 - Jan 2023}{Front End Developer}{}
+		\projectitem{HCIS Imeco}{Sep 2022 - Jan 2023}{Front End Developer}{}
 		\liststart
 			\item Built the HCIS (Human Capital Information System) application for a company, employee data, salaries, attendance, and company requirements using Vue 3, Pinia, Vite, Maps, and TailwindCSS.
 		\listend
 
-		\longitem{Speed Online}{Feb - Apr 2022}{Mobile Developer}{}
+		\projectitem{Speed Online}{Feb - Apr 2022}{Mobile Developer}{}
 		\liststart
 			\item Built the Speed Online mobile application for ordering ship crossing tickets in North Kalimantan using Vue 3, Quasar, Vuex, Maps, WhatsApp OTP, and Xendit Payment Gateway.
 		\listend
 
-		\longitem{Flona Store}{Nov 2021 - Jun 2022}{Front End Developer}{}
+		\projectitem{Flona Store}{Nov 2021 - Jun 2022}{Front End Developer}{}
 		\liststart
 			\item Developed the Flona Store Marketplace, a platform for selling houseplant collections from Indonesia and around the world, with international shipping, using Vue, Vuex, Maps, ApexCharts, and Bootstrap Vue.
 		\listend
 
-		\longitem{Jastipin Aja}{Oct - Dec 2020}{Mobile Developer}{}
+		\projectitem{Jastipin Aja}{Oct - Dec 2020}{Mobile Developer}{}
 		\liststart
 			\item Developed the Jastipin Aja mobile application for Aldeoz Group to offer same-day delivery of regional food during the pandemic era, using React, React Native, Paper, Firebase, OneSignal, and Midtrans Payment Gateway.
 		\listend
 
-		\longitem{Dicicilaja}{Jan - Dec 2019}{Lead Android Developer}{}
+		\projectitem{Dicicilaja}{Jan - Dec 2019}{Lead Android Developer}{}
 		\liststart
 			\item Created the Dicicilaja app for Adira Finance, featuring marketplace and sales functionalities, with 100K+ downloads on the Play Store, using Android Studio, Java, Kotlin, RxJava, Firebase, and OneSignal.
 		\listend
