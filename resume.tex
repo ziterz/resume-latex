@@ -6,21 +6,19 @@
 %----------------------------------------
 
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper, margin=0.3in,top=0.3in]{geometry}
 
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=0.35in,top=0.35in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{enumitem}
-\setlist{topsep=1mm, parsep=1.75mm, itemsep=-0.1em}
-
 \usepackage{tgschola}
 \usepackage[T1]{fontenc}
-
 \usepackage{changepage}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
-\usepackage{multicol}
+
+\setlist{topsep=1mm, parsep=1.75mm, itemsep=-0.1em}
 
 \hyphenpenalty=10000
 
@@ -44,18 +42,18 @@
 % Custom commands
 \newcommand{\header}[1]{
 	\vspace{2mm}
-	{\large \noindent \textbf{#1}}
-	\vspace{1mm}
+	{\large \noindent \textcolor[HTML]{004780}{\textbf{#1}}}
+	\vspace{0.5mm}
 	\hrule
-	\vspace{1mm}
+	\vspace{1.5mm}
 }
 
 \newcommand{\skillsheader}[1]{
 	\vspace{2mm}
-	{\large \noindent \textbf{#1}}
-	\vspace{2mm}
+	{\large \noindent \textcolor[HTML]{004780}{\textbf{#1}}}
+	\vspace{1.5mm}
 	\hrule
-	\vspace{1mm}
+	\vspace{1.5mm}
 }
 
 \newcommand{\shortitem}[4]{
@@ -68,25 +66,20 @@
 
 \newcommand{\longitem}[4]{
 	\begin{adjustwidth}{}{}
-		\textbf{#1} \hfill \ifx&#2& \else \textbf{#2} \fi \\
-		\textit{#3} \ifx&#4& \else \hfill #4 \fi
+		\MakeUppercase{\textbf{#1}} - \textbf{#3} \hfill \ifx&#2& \else \textbf{#2} \fi \\
 	\end{adjustwidth}
 	\vspace{-1mm}
 }
 
-\newcommand{\content}[1]{
-	\vspace{1mm}
-		{#1}
-	\vspace{2mm}
-}
 \newcommand{\skills}[1]{%
-	\begin{itemize}[leftmargin=*]
+	\begin{itemize}[leftmargin=*]\leftskip=0.5em
 		\setlength\itemsep{-1mm}
 		#1
 	\end{itemize}%
 }
-\newcommand{\liststart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\listend}{\end{itemize}\vspace{1mm}}
+
+\newcommand{\liststart}{\begin{itemize}[leftmargin=*]\leftskip=0.5em\vspace{-5mm}}
+\newcommand{\listend}{\end{itemize}\vspace{0.2mm}}
 
 %----------------------------------------
 % Resume starts here
@@ -99,7 +92,7 @@
 
 		\vspace{1mm}
 
-		{\large Fullstack Engineer, Educator}
+		{\large Frontend Engineer, Instructor}
 
 		\vspace{1mm}
 		
@@ -107,109 +100,88 @@
 		\faLink ~\href{https://ziterz.dev}{\underline{ziterz.dev}}  $\mid$ \faGithub ~\href{https://github.com/ziterz}{\underline{github.com/ziterz}} $\mid$ \faLinkedin ~\href{https://linkedin.com/in/ziterz}{\underline{linkedin.com/in/ziterz}}
 	\end{flushleft}
 
-	\vspace{-2mm}
+	\vspace{-1mm}
 
 	%----------------------------------------
-	% Objective
-	\header{Objective}
-		\vspace{1mm}
+	% Summary
+	\header{Summary}
+		Experienced Frontend Engineer specializing in Web and Mobile Development, with a track record of developing 10+ applications. Has 4 years of experience as a Full-Stack JavaScript Instructor, mentoring 800+ students in fundamentals and advanced topics. Achieved significant improvements in student scores with a 93\% satisfaction rate.
 
-		Seeking a position as a Fullstack Engineer specializing in Web/Mobile Development, aiming to leverage 4 years of experience in web and mobile development, including both native and hybrid approaches. With a proven track record of mentoring and leading teams at coding bootcamps, I maintain a strong work ethic and excel at adapting to any situation.
-	\setlength{\columnsep}{1.5em}
+	\vspace{1mm}
 
 	%----------------------------------------
-	% Multi Column
-	\begin{multicols}{2}
+	% Technical Skills
+	\skillsheader{Technical Skills}
+	\skills{
+		\item \textbf{Web:} HTML, CSS, JavaScript, TypeScript, Node.js, Vue.js, React.js, Next.js
+		\item \textbf{Mobile:} React Native, Expo, Swift, UIKit, SwiftUI, CocoaPods
+		\item \textbf{Others:} OOP, MVC/MVVM, RESTful APIs, Firebase, Git, Agile, Jira, TDD, Unit Testing
+	}		
 
-		%----------------------------------------
-		% Technical Skills
-		\skillsheader{Technical Skills}
-		\skills{
-			\item \textbf{Hybrid:} HTML, CSS, JavaScript, TypeScript, Node.js, Vue.js, Quasar, React.js, Next.js
-			\item \textbf{Native:} Swift, UIKit, SwiftUI, CocoaPods, RxSwift
-			\item \textbf{Others:} OOP, MVC/MVVM, RESTful APIs, Firebase, Git, Agile, Scrum, Jira, TDD, Unit Testing
-		}		
+	%----------------------------------------
+	% Professional Experience
+	\header{Professional Experience}
+		\longitem{Hacktiv8 Indonesia}{Apr 2024 - Present}{Part Time Instructor}{}
+		\liststart
+			\item Teaching part time programs in Hacktiv8 and Prakerja classes for various courses such as web development, mobile development, and software analysis.
+		\listend
 
-		%----------------------------------------
-		% Related Projects
-		\header{Related Projects}
-			\vspace{1mm}
-			\longitem{Riot Board Game}{Sep - Nov 2023}{iOS Developer \& Artwork Creator}{}
-			\liststart
-				\item Developed a hybrid board game with a native iOS companion app that integrates physical and digital elements using NFC technology for interactions.
-				\item Using Xcode, SwiftUI, CoreNFC, AVKit, MVVM.
-			\listend
+		\longitem{Apple Developer Academy}{Feb - Dec 2023}{iOS Developer (Intern)}{}
+		\liststart
+			\item Deepening expertise in iOS Development, design, and project management, including Apple Frameworks, Design Patterns, and HIG principles. Launched 5+ applications on TestFlight and the App Store.
+		\listend
 
-			\longitem{HCIS Imeco}{Sep 2022 - Jan 2023}{Front End Developer}{}
-			\liststart
-				\item Developed the HCIS (Human Capital Information System) application for a company, including employee data, salaries, attendance, and company requirements.
-				\item Using Vue 3, Pinia, Vite, Maps, and TailwindCSS.
-			\listend
+		\longitem{Hacktiv8 Indonesia}{Jan 2020 - Feb 2023}{Lead Phase Full-Stack JavaScript Instructor}{}
+		\liststart
+			\item Supervise a team of 6-8 colleagues responsible for evaluating and observing the learning process and instructors. \vspace{-1mm}
+			\item Maintain curriculum progress, teach, guide, and regularly assess student progress. \vspace{-1mm}
+			\item Teaching courses such as JavaScript, Node.js, Express.js, Vue.js, React.js, React Native, Redux, TDD, Jest, MongoDB, GraphQL, Docker and Microservices.
+		\listend
 
-			\longitem{Speed Online}{Feb - Apr 2022}{Mobile Developer}{}
-			\liststart
-				\item Developed the Speed Online mobile application for ordering tickets for ship crossings in North Kalimantan.
-				\item Using Vue 3, Quasar, Vuex, Maps, WhatsApp OTP, and Xendit Payment Gateway.
-			\listend
+	%----------------------------------------
+	% Related Projects
+	\header{Related Projects}
+		\longitem{Riot Board Game}{Sep - Nov 2023}{iOS Developer}{}
+		\liststart
+			\item Created a hybrid board game for 2-4 players with a native iOS that integrates NFC cards and digital elements. \vspace{-1mm}
+			\item Using Xcode, SwiftUI, CoreNFC, and AVKit.
+		\listend
 
-			\longitem{Flona Store}{Nov 2021 - Jun 2022}{Front End Developer}{}
-			\liststart
-				\item Developed Flona Store Marketplace, leading in design, global shipping, and eco-friendly practices for healthy plant delivery and community engagement.
-				\item Using Vue, Vuex, Maps, ApexCharts, and Bootstrap Vue.
-			\listend
+		\longitem{HCIS Imeco}{Sep 2022 - Jan 2023}{Front End Developer}{}
+		\liststart
+			\item Built the HCIS (Human Capital Information System) application for a company, employee data, salaries, attendance, and company requirements using Vue 3, Pinia, Vite, Maps, and TailwindCSS.
+		\listend
 
-			\longitem{Jastipin Aja}{Oct - Dec 2020}{Mobile Developer}{}
-			\liststart
-				\item Developed the Jastipin Aja mobile application for Aldeoz Group to serve users who miss their regional food during the pandemic era, offering same-day delivery.
-				\item Using React, React Native, Paper, Firebase, OneSignal, and Midtrans Payment Gateway.
-			\listend
+		\longitem{Speed Online}{Feb - Apr 2022}{Mobile Developer}{}
+		\liststart
+			\item Built the Speed Online mobile application for ordering ship crossing tickets in North Kalimantan using Vue 3, Quasar, Vuex, Maps, WhatsApp OTP, and Xendit Payment Gateway.
+		\listend
 
-			\longitem{Dicicilaja}{Jan - Dec 2019}{Lead Android Developer}{}
-			\liststart
-				\item Developed the Dicicilaja mobile app for Adira Finance, including a marketplace, sales app, branch office, business rewards, simulation, order-in, and inbox.
-				\item The application is available on the Play Store and has been downloaded by more than 100,000 users.
-				\item Using Android Studio, Java, Kotlin, RxJava, Firebase, and OneSignal.
-			\listend
+		\longitem{Flona Store}{Nov 2021 - Jun 2022}{Front End Developer}{}
+		\liststart
+			\item Developed the Flona Store Marketplace, a platform for selling houseplant collections from Indonesia and around the world, with international shipping, using Vue, Vuex, Maps, ApexCharts, and Bootstrap Vue.
+		\listend
 
-		\columnbreak
+		\longitem{Jastipin Aja}{Oct - Dec 2020}{Mobile Developer}{}
+		\liststart
+			\item Developed the Jastipin Aja mobile application for Aldeoz Group to offer same-day delivery of regional food during the pandemic era, using React, React Native, Paper, Firebase, OneSignal, and Midtrans Payment Gateway.
+		\listend
 
-		%----------------------------------------
-		% Professional Experience
-		\header{Professional Experience}
-			\longitem{Apple Developer Academy}{Feb - Dec 2023}{iOS Developer}{}
-			\liststart
-				\item Learn coding, design, project management and professional skills, such as iOS Development, Swift Programming, Apple Frameworks, Design Patterns, Testing and Human Interface Guidelines (HIG) principles, in a world-class developer environment.
-				\item Built applications that are available on TestFlight and the App Store.
-			\listend
+		\longitem{Dicicilaja}{Jan - Dec 2019}{Lead Android Developer}{}
+		\liststart
+			\item Created the Dicicilaja app for Adira Finance, featuring marketplace and sales functionalities, with 100K+ downloads on the Play Store, using Android Studio, Java, Kotlin, RxJava, Firebase, and OneSignal.
+		\listend
 
-			\longitem{Hacktiv8 Indonesia}{Jun 2021 - Feb 2023}{Lead Phase Full-Stack JavaScript Instructor}{}
-			\liststart
-				\item I supervise a team of 6-8 colleagues responsible for evaluating and observing the learning process and instructors.
-				\item Collaborate with the Instructor Lead and the team to train and supervise new high-quality instructors.
-				\item I continuously monitor and maintain curriculum progress while also teaching and ensuring effective delivery of course material.
-			\listend
+	%----------------------------------------
+	% Recent Certifications
+	\skillsheader{Recent Certifications}
+		\shortitem{App Development with Swift Certified User by Apple}{Feb 2024}{Certificate of Completion}{}
+		\shortitem{Apple Developer Academy Certificate}{Dec 2023}{Certificate of Completion}{}
+		\shortitem{Swift Student Challenge WWDC 2023 by Apple}{May 2023}{Swift Student Challenge Winner}{}
 
-			\longitem{Hacktiv8 Indonesia}{Jan 2020 - Jun 2021}{Full-Stack JavaScript Instructor}{}
-			\liststart
-				\item I teach, guide, and communicate with students while monitoring and assessing their progress on a regular basis.
-				\item Teaching courses such as JavaScript, Node.js, Vue.js, Pinia, React.js, React Native, Redux, TDD, Jest, Microservices, MongoDB, GraphQL, and Docker.
-			\listend
-
-		%----------------------------------------
-		% Recent Certifications
-		\skillsheader{Recent Certifications}
-			\shortitem{App Development with Swift Certified User by Apple}{}{Certificate of Completion - Feb 2024}{}
-			\shortitem{100 Days of SwiftUI by Hacking with Swift}{}{Certificate of Distinction - Jan 2024}{}
-			\shortitem{100 Days of Swift by Hacking with Swift}{}{Certificate of Distinction - Jan 2024}{}
-			\shortitem{Apple Developer Academy Certificate}{}{Certificate of Completion - Dec 2023}{}
-			\shortitem{Swift Student Challenge WWDC23 by Apple}{}{Swift Student Challenge Winner - May 2023}{}
-
-		%----------------------------------------
-		% Educational Background
-		\header{Educational Background}
-			\shortitem{Apple Developer Academy}{Dec 2023}{Apple Developer}{}
-			\shortitem{Indonesia University of Education}{Oct 2019}{Bachelor of Education in Computer Science}{GPA: 3.72}
-
-	\end{multicols}
+	%----------------------------------------
+	% Educational Background
+	\header{Educational Background}
+		\shortitem{\MakeUppercase{Indonesia University of Education}}{Aug 2015 - Oct 2019}{Bachelor of Education in Computer Science}{}
 
 \end{document}
