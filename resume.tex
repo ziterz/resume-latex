@@ -16,6 +16,7 @@
 \usepackage{changepage}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
+\usepackage{graphicx}
 
 \setlist{topsep=1mm, parsep=1.75mm, itemsep=-0.1em}
 
@@ -45,6 +46,13 @@
 	\vspace{0.5mm}
 	\hrule
 	\vspace{1.5mm}
+}
+
+\newcommand{\desc}[1]{
+	\begin{adjustwidth}{}{}
+		#1
+	\end{adjustwidth}
+	\vspace{1mm}
 }
 
 \newcommand{\skillsheader}[1]{
@@ -95,25 +103,39 @@
 	%----------------------------------------
 	% Hero
 	\begin{flushleft}
-		{\LARGE \textbf{Ziady Mubaraq}} \\
-		\vspace{1mm}
-		{\large Full-Stack Developer | AI Automation}
-		\vspace{1mm}
-		
-		Jakarta, Indonesia $\mid$ \href{https://wa.me/6285186661414}{\underline{(+62) 851-8666-1414}} $\mid$ \href{mailto:ziady.mubaraq@gmail.com}{\underline{ziady.mubaraq@gmail.com}} \\
-		\href{https://ziterz.dev}{\underline{ziterz.dev}} $\mid$ \href{https://github.com/ziterz}{\underline{github.com/ziterz}} $\mid$ \href{https://linkedin.com/in/ziterz}{\underline{linkedin.com/in/ziterz}}
+		\begin{minipage}[t]{0.8\linewidth}
+			{\LARGE \textbf{Ziady Mubaraq}} \\
+			
+			\vspace{-2mm}
+			{\large Full-Stack Developer | AI \& Automation}
+			
+			\vspace{1mm}
+			Jakarta, Indonesia $\mid$ \href{https://wa.me/6285186661414}{\underline{(+62) 851-8666-1414}} $\mid$ \href{mailto:ziady.mubaraq@gmail.com}{\underline{ziady.mubaraq@gmail.com}} \\
+			\href{https://ziterz.dev}{\underline{ziterz.dev}} $\mid$ \href{https://github.com/ziterz}{\underline{github.com/ziterz}} $\mid$ \href{https://linkedin.com/in/ziterz}{\underline{linkedin.com/in/ziterz}}
+		\end{minipage}%
+		\hfill
+		\begin{minipage}[t]{0.2\linewidth}
+			\raggedleft
+			\IfFileExists{photo.png}{\vspace{-4mm}\includegraphics[width=2.8cm]{photo.png}}{}
+		\end{minipage}
 	\end{flushleft}
-
-	\vspace{-1mm}
+	\vspace{-8mm}
+	
+	%----------------------------------------
+	% Summary
+	\header{Summary}
+	\desc{
+		Full-Stack Developer with 5+ years of experience building scalable web applications and SaaS platforms, focusing on AI-powered systems and automation. Experienced in building AI chat agents, LLM integrations, and agentic workflows for financial services platforms. Strong individual contributor with expertise in React, Node.js, and AWS, delivering reliable and scalable systems. Passionate about leveraging AI to build intelligent products that improve how businesses operate.
+	}
 
 	%----------------------------------------
 	% Technical Skills
 	\skillsheader{Technical Skills}
 	\skills{
 	\item \textbf{Languages:} JavaScript, TypeScript, Swift
-	\item \textbf{Frameworks:} React, React Native, Expo, Next.js, Vue.js
-	\item \textbf{Backend \& Tools:} Node.js, PostgreSQL, MongoDB, Firebase, REST APIs, GraphQL, AWS, Docker
-	\item \textbf{AI \& Automation:} AI Agents, Agentic Workflows, n8n, LLM Integration, Prompt Design
+	\item \textbf{Frontend \& Backend:} React, React Native, Next.js, Vue.js, Node.js, REST APIs, GraphQL
+	\item \textbf{Database \& Cloud:} PostgreSQL, MongoDB, Firebase, AWS (EC2, S3, RDS, SQS), Docker
+	\item \textbf{AI \& Automation:} AI Agents, LLM Integration, Agentic Workflows, n8n, Prompt Engineering
 }
 
 	%----------------------------------------
@@ -121,37 +143,22 @@
 	\header{Professional Experience}
 		\longitem{Lunash}{Sep 2024 - Present}{Full-Stack Developer}{}
 		\liststart
-		\item Developed a SaaS platform featuring TraceLink for skip tracing and an AI chat agent for debt collection campaigns using agentic workflows and LLM prompt design. \vspace{-1mm}
-		\item Developed frontend applications with React.js and Vite and backend services with Node.js and TypeScript to power dashboards and AI chat workflows processing customer conversations across DPD buckets. \vspace{-1mm}
-		\item Managed AWS cloud infrastructure, implemented queue-based bulk processing, and optimized system performance across EC2, S3, RDS, SQS, and CloudWatch.
+		\item Developed an AI-powered SaaS platform automating debt collection campaigns, handling up to 2,000 concurrent conversations using agentic workflows, re-engaging previously uncontactable borrowers by generating an average of 8 alternative phone numbers per query with a 60\% valid match rate. \vspace{-1mm}
+		\item Built React.js/Vite frontend applications and Node.js/TypeScript backend services powering operational dashboards and AI chat workflows for large-scale customer communication. \vspace{-1mm}
+		\item Managed AWS cloud infrastructure, implemented queue-based bulk processing, and optimized system performance using EC2, S3, RDS, SQS, and CloudWatch.
 		\listend
 		
-		\longitem{Hacktiv8}{Jan 2024 - Sep 2024}{Front-End Instructor}{}
+		\longitem{Hacktiv8}{Jan 2020 - Sep 2024}{Full-Stack JavaScript Instructor}{}
 		\liststart
-			\item Delivered front-end development courses covering JavaScript, React, and React Native.
-		\listend
-
-		\longitem{Hacktiv8}{Jun 2021 - Feb 2023}{Lead Phase Full-Stack JavaScript Instructor}{}
-		\liststart
-			\item Led a team of 6-8 colleagues, enhancing the learning process and instructor performance. \vspace{-1mm}
-			\item Maintained curriculum progress, instructed and evaluated student progress. \vspace{-1mm}
-			\item Facilitated courses in JavaScript, Node.js, React, Redux, React Native, TDD, Jest, and MongoDB.
-		\listend
-
-		\longitem{Hacktiv8}{Jan 2020 - Jun 2021}{Full-Stack JavaScript Instructor}{}
-		\liststart
-			\item Delivered courses in JavaScript, Node.js, React, Redux, React Native, TDD, Jest, MongoDB, and GraphQL.
+			\item Promoted to Lead Phase Instructor; led and mentored a team of 6–8 instructors to improve learning delivery and curriculum effectiveness. \vspace{-1mm}
+			\item Delivered instruction in Full-Stack JavaScript and Front-End development, covering React, Node.js, Redux, React Native, GraphQL, TDD, Jest, and MongoDB. \vspace{-1mm}
+			\item Maintained curriculum progress and evaluated student performance across multiple batches. \vspace{-1mm}
+			\item Mentored 1{,}000+ students through project-based learning and assessments.
 		\listend
 
 	%----------------------------------------
-	% Educational Background
-	\header{Educational Background}
-		\shortitem{\MakeUppercase{Apple Developer Academy}}{Feb 2023 - Dec 2023}{Graduate of the Apple Developer Scholarship Program}{}
-		\shortitem{\MakeUppercase{Indonesia University of Education}}{Aug 2015 - Oct 2019}{Bachelor of Education in Computer Science, GPA 3.72}{}
-
-	%----------------------------------------
-	% Related Projects
-	\header{Related Projects}
+	% Freelance Projects
+	\header{Freelance Projects}
 		\projectitem{AL+ Agent}{Sep 2025 - Feb 2026}{Full-Stack Developer (AI Agent)}{}
 		\liststart
 		\item Developed a WhatsApp AI agent that automates customer responses and lead qualification using n8n workflows with Next.js, Supabase, WAHA, and WhatsApp Business API.
@@ -176,4 +183,11 @@
 		\liststart
 			\item Developed the Dicicilaja mobile app for Adira Finance, featuring marketplace and sales functionalities with 100K+ downloads on the Play Store.
 		\listend
+
+	%----------------------------------------
+	% Educational Background
+	\header{Educational Background}
+	\shortitem{\MakeUppercase{Apple Developer Academy}}{Feb 2023 - Dec 2023}{Graduate of the Apple Developer Scholarship Program}{}
+	\shortitem{\MakeUppercase{Indonesia University of Education}}{Aug 2015 - Oct 2019}{Bachelor of Education in Computer Science, GPA 3.72}{}
+
 \end{document}
