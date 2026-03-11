@@ -73,7 +73,7 @@
 
 \newcommand{\longitem}[4]{
 	\begin{adjustwidth}{}{}
-		\MakeUppercase{\textbf{#1}} - \textbf{#3} \hfill \ifx&#2& \else \textbf{#2} \fi \\
+		\MakeUppercase{\textbf{#1}} - \textbf{#3} \hfill \ifx&#2& \else \textbf{#2} \fi \\ \textit{#4} \\
 	\end{adjustwidth}
 	\vspace{-1mm}
 }
@@ -92,7 +92,7 @@
 	\end{adjustwidth}%
 }
 
-\newcommand{\liststart}{\begin{itemize}[leftmargin=*]\leftskip=0.5em\vspace{-5mm}}
+\newcommand{\liststart}{\begin{itemize}[leftmargin=*]\leftskip=0.2em\vspace{-5mm}}
 \newcommand{\listend}{\end{itemize}\vspace{0.2mm}}
 \newcommand{\textstart}{\begin{adjustwidth}{}{}\vspace{-4mm}}
 \newcommand{\textend}{\end{adjustwidth}\vspace{0.2mm}}
@@ -120,7 +120,7 @@
 			\IfFileExists{photo.png}{\vspace{-4mm}\includegraphics[width=2.7cm]{photo.png}}{}
 		\end{minipage}
 	\end{flushleft}
-	\vspace{-8mm}
+	\vspace{-7mm}
 	
 	%----------------------------------------
 	% Summary
@@ -143,14 +143,14 @@
 	%----------------------------------------
 	% Professional Experience
 	\header{Professional Experience}
-		\longitem{Lunash}{Sep 2024 - Present}{Full-Stack Developer}{}
+		\longitem{Lunash}{Sep 2024 - Present}{Full-Stack Developer}{Jakarta, Indonesia}
 		\liststart
 		\item Developed an AI-powered SaaS platform automating debt collection campaigns, handling up to 1,000 concurrent conversations using agentic workflows, re-engaging previously uncontactable borrowers by generating an average of 8 alternative phone numbers per query with a 60\% valid match rate. \vspace{-1mm}
 		\item Built React.js/Vite frontend applications and Node.js/TypeScript backend services powering operational dashboards and AI chat workflows for large-scale customer communication. \vspace{-1mm}
 		\item Managed AWS cloud infrastructure, implemented queue-based bulk processing, and optimized system performance using EC2, S3, RDS, SQS, and CloudWatch.
 		\listend
 		
-		\longitem{Hacktiv8}{Jan 2020 - Sep 2024}{Full-Stack JavaScript Instructor}{}
+		\longitem{Hacktiv8}{Jan 2020 - Sep 2024}{Full-Stack JavaScript Instructor}{Jakarta, Indonesia}
 		\liststart
 			\item Promoted to Lead Phase Instructor; led and mentored a team of 6–8 instructors to improve learning delivery and curriculum effectiveness. \vspace{-1mm}
 			\item Delivered courses in Full-Stack JavaScript and Front-End development, covering React, Node.js, Redux, React Native, GraphQL, TDD, Jest, and MongoDB. \vspace{-1mm}
