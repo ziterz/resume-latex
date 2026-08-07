@@ -1,13 +1,13 @@
 %----------------------------------------
 % LaTeX Resume
 % Author : Ziady Mubaraq
-% Source : https://github.com/ziterz/resume-latex/
+% Source : https://github.com/ziadyjo/resume-latex/
 %----------------------------------------
 
 \documentclass{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[a4paper, margin=0.69in]{geometry}
+\usepackage[a4paper, margin=0.62in]{geometry}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{enumitem}
@@ -41,7 +41,7 @@
 %----------------------------------------
 % Custom commands
 \newcommand{\header}[1]{
-	\vspace{2mm}
+	\vspace{2.5mm}
 	{\large \noindent \textcolor[HTML]{19598C}{\textbf{#1}}}
 	\vspace{0.5mm}
 	\hrule
@@ -85,15 +85,15 @@
 	\vspace{-1mm}
 }
 
-\newcommand{\skills}[1]{%
+\newcommand{\skills}[1]{
 	\begin{adjustwidth}{}{}
 		\vspace{-1mm}
 		#1
-	\end{adjustwidth}%
+	\end{adjustwidth}
 }
 
 \newcommand{\liststart}{\begin{itemize}[leftmargin=*]\leftskip=0.2em\vspace{-5mm}}
-\newcommand{\listend}{\end{itemize}\vspace{0.2mm}}
+\newcommand{\listend}{\end{itemize}}
 \newcommand{\textstart}{\begin{adjustwidth}{}{}\vspace{-4mm}}
 \newcommand{\textend}{\end{adjustwidth}\vspace{0.2mm}}
 
@@ -108,11 +108,11 @@
 			{\LARGE \textbf{Ziady Mubaraq}} \\
 			
 			\vspace{-2mm}
-			{\large Full-Stack Developer | AI \& Automation}
+			{\large Full-Stack AI Engineer}
 			
 			\vspace{1mm}
 			Jakarta, Indonesia $\mid$ \href{https://wa.me/6285186661414}{\underline{(+62) 851-8666-1414}} $\mid$ \href{mailto:ziady.mubaraq@gmail.com}{\underline{ziady.mubaraq@gmail.com}} \\
-			\href{https://ziterz.dev}{\underline{ziterz.dev}} $\mid$ \href{https://github.com/ziterz}{\underline{github.com/ziterz}} $\mid$ \href{https://linkedin.com/in/ziterz}{\underline{linkedin.com/in/ziterz}}
+			\href{https://ziadymubaraq.com}{\underline{ziadymubaraq.com}} $\mid$ \href{https://github.com/ziadyjo}{\underline{github.com/ziadyjo}} $\mid$ \href{https://linkedin.com/in/ziadyjo}{\underline{linkedin.com/in/ziadyjo}}
 		\end{minipage}%
 		\hfill
 		\begin{minipage}[t]{0.2\linewidth}
@@ -126,18 +126,7 @@
 	% Summary
 	\header{Summary}
 	\desc{
-		Full-Stack Developer with 5+ years of experience building scalable web applications and SaaS platforms, focusing on AI-powered systems and automation. Experienced in building AI chat agents, LLM integrations, and agentic workflows for financial services platforms. Strong individual contributor with expertise in React, Node.js, and AWS, delivering reliable and scalable systems. Passionate about leveraging AI to build intelligent products that improve how businesses operate.
-	}
-
-	%----------------------------------------
-	% Technical Skills
-	\skillsheader{Technical Skills}
-	\vspace{-2mm}
-	\skills{
-		\item \textbf{Languages:} JavaScript, TypeScript, Swift
-		\item \textbf{Frontend \& Backend:} React, React Native, Next.js, Vue.js, Node.js, REST APIs, GraphQL
-		\item \textbf{Database \& Cloud:} PostgreSQL, MongoDB, Firebase, AWS, Docker
-		\item \textbf{AI \& Automation:} AI Agents, LLM Integration, Agentic Workflows, n8n, Prompt Engineering
+		Full-Stack AI Engineer with 5+ years of experience building scalable web applications and AI-powered SaaS platforms end-to-end. Architected multi-agent workflows and RAG-grounded LLM systems for financial services, including an autonomous WhatsApp collection agent operating at production scale. Strong across React, Node.js, and AWS, with a track record of shipping reliable, production-grade AI systems. Passionate about using agentic AI to automate real business operations, not just prototypes.
 	}
 
 	%----------------------------------------
@@ -145,45 +134,34 @@
 	\header{Professional Experience}
 		\longitem{Lunash}{Sep 2024 - Present}{Full-Stack Developer}{Jakarta, Indonesia}
 		\liststart
-		\item Developed an AI-powered SaaS platform automating debt collection campaigns, handling up to 1,000 concurrent conversations using agentic workflows, re-engaging previously uncontactable borrowers by generating an average of 8 alternative phone numbers per query with a 60\% valid match rate. \vspace{-1mm}
-		\item Built React.js/Vite frontend applications and Node.js/TypeScript backend services powering operational dashboards and AI chat workflows for large-scale customer communication. \vspace{-1mm}
-		\item Managed AWS cloud infrastructure, implemented queue-based bulk processing, and optimized system performance using EC2, S3, RDS, SQS, and CloudWatch.
-		\listend
+		\item Architected an end-to-end debt-collection SaaS platform, integrating TraceLink for automated skip tracing with a multi-agent AI system that autonomously runs collection campaigns without manual intervention. \vspace{-1mm}
+		\item Engineered LLM prompt strategies and a RAG-grounded pipeline that automatically pulls live customer payment history and DPD (Days Past Due) risk data into agent context, reducing hallucinated responses and removing manual data lookup from the conversation flow. \vspace{-1mm}
+		\item Designed and orchestrated a multi-agent n8n workflow, combining CRON-triggered outreach with a periodic reply-monitoring loop (60 min interval) that auto-routes $\sim$8,000 daily debtor conversations to specialized agents (intent detection, negotiation, follow-up) by DPD risk profile, achieving a 40-60\% reply rate. \vspace{-1mm}
+		\item Built full-stack infrastructure (React/Vite, Node.js/TypeScript) on AWS (EC2, S3, RDS, SQS, CloudWatch), engineering a fault-tolerant, queue-based pipeline with SQS retry to power operational dashboards and high-volume, real-time AI conversation workflows reliably.
+		\listend\vspace{0.2mm}
 		
 		\longitem{Hacktiv8}{Jan 2020 - Sep 2024}{Full-Stack JavaScript Instructor}{Jakarta, Indonesia}
 		\liststart
-			\item Promoted to Lead Phase Instructor; led and mentored a team of 6–8 instructors to improve learning delivery and curriculum effectiveness. \vspace{-1mm}
-			\item Delivered courses in Full-Stack JavaScript and Front-End development, covering React, Node.js, Redux, React Native, GraphQL, TDD, Jest, and MongoDB. \vspace{-1mm}
-			\item Maintained curriculum progress and evaluated student performance across multiple batches. \vspace{-1mm}
-			\item Mentored 1{,}000+ students through project-based learning and assessments.
-		\listend
+			\item Promoted to Lead Phase Instructor; led a team of 6--8 instructors, owning learning delivery, curriculum quality, and instructor performance across multiple batches. \vspace{-1mm}
+			\item Trained and mentored 1{,}000+ engineers in Full-Stack JavaScript through project-based learning, covering React, Node.js, and modern JS tooling.
+		\listend\vspace{-1mm}
 
 	%----------------------------------------
 	% Freelance Projects
 	\header{Freelance Projects}
+		\projectitem{Applied AI Engineer Program}{Aug 2026}{Subject Matter Expert, Curriculum Developer}{}
+		\textstart
+			Designed and reviewed curriculum covering RAG, LangGraph, n8n, AI agent workflows, automation, pgvector, and Chat Bot integration. Built a multi-stage capstone covering data pipeline, AI, and automation layers.
+		\textend
+
 		\projectitem{AL+ Agent}{Sep 2025 - Feb 2026}{Full-Stack Developer (AI Agent)}{}
 		\textstart
-			Developed a WhatsApp AI agent that automates conversations and lead qualification using n8n workflows with Next.js, Supabase, WAHA, and WhatsApp Business API.
+			Built and shipped a WhatsApp AI agent that automates end-to-end customer conversations and lead qualification, using n8n agentic workflows with Next.js, Supabase, WAHA, and the WhatsApp Business API.
 		\textend
 
 		\projectitem{Auto Agent}{Dec 2024 - Feb 2025}{Full-Stack Developer}{}
 		\textstart
-			Developed a Chrome Extension to automate data entry and application navigation for operational agents.
-		\textend
-
-		\projectitem{HCIS Imeco}{Sep 2022 - Jan 2023}{Front-End Developer}{}
-		\textstart
-			Developed the HCIS (Human Capital Information System) application to manage employee data, payroll, and attendance.
-		\textend
-
-		\projectitem{Speed Online}{Feb - Apr 2022}{Mobile Developer}{}
-		\textstart
-			Developed the Speed Online mobile application for ordering ferry crossing tickets in North Kalimantan.
-		\textend
-
-		\projectitem{Dicicilaja}{Jan - Dec 2019}{Android Developer}{}
-		\textstart
-			Developed the Dicicilaja mobile app for Adira Finance, featuring marketplace and sales functionalities with 100K+ downloads on the Play Store.
+			Built a Chrome Extension automating data entry and application navigation for operational agents, eliminating repetitive manual workflows.
 		\textend
 
 	%----------------------------------------
@@ -191,5 +169,17 @@
 	\header{Educational Background}
 	\shortitem{\MakeUppercase{Apple Developer Academy}}{Feb 2023 - Dec 2023}{Graduate of the Apple Developer Scholarship Program}{}
 	\shortitem{\MakeUppercase{Indonesia University of Education}}{Aug 2015 - Oct 2019}{Bachelor of Education in Computer Science, GPA 3.72}{}
+
+	%----------------------------------------
+	% Technical Skills
+	\skillsheader{Technical Skills}
+	\vspace{-2mm}
+	\begin{itemize}[leftmargin=*]
+		\item \textbf{Programming Language:} JavaScript, TypeScript, Go
+		\item \textbf{AI \& LLM:} OpenAI/Claude, Multi-Agent Systems, RAG, Vector DBs (pgvector), MCP, LangChain, n8n
+		\item \textbf{Frontend:} React, React Native, Next.js, Zustand, TanStack Query, Tailwind CSS
+		\item \textbf{Backend:} Node.js, Go (Gin), REST APIs, GraphQL, gRPC, WebSockets, Vitest/Jest (Unit Testing)
+		\item \textbf{Data, Cloud \& DevOps:} PostgreSQL, Redis, AWS (EC2, S3, RDS, SQS), Docker, GitHub Actions (CI/CD)
+	\end{itemize}
 
 \end{document}

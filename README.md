@@ -1,1 +1,1 @@
-[Open in PDF format](https://ziterz.github.io/resume-latex/resume.pdf)
+[Open in PDF format](https://ziadyjo.github.io/resume-latex/resume.pdf)
